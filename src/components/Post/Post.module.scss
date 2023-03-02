@@ -1,0 +1,198 @@
+.container {
+    width: 470px;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 7px;
+    margin: 10px 0;
+    .content {
+        width: 100%;
+        height: 100%;
+        .account {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            padding-right: 10px;
+            .icon-menu-post {
+                cursor: pointer;
+            }
+        }
+        .images-posted {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            max-height: max-content;
+        }
+        .actions {
+            display: flex;
+            padding-left: 15px;
+            padding-top: 5px;
+            padding: 5px 15px;
+            justify-content: space-between;
+            .left {
+                display: flex;
+                gap: 15px;
+            }
+        }
+        .info-post {
+            margin-top: 20px;
+            padding-left: 15px;
+            .likes {
+                .count-like {
+                    color: #262626;
+                    display: inline;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 18px;
+                }
+            }
+            .content-post {
+                height: 100%;
+            }
+            .nickname-account {
+                align-items: center;
+                color: #262626;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 700;
+                justify-content: flex-start;
+                line-height: 18px;
+                cursor: pointer;
+            }
+            .content {
+                color: #262626;
+                display: inline;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            .link-account-tag {
+                color: #00376b;
+                display: inline;
+                font-family: -apple-system;
+                font-size: 14px;
+                line-height: 18px;
+                cursor: pointer;
+            }
+            .comment {
+                display: flex;
+                justify-content: space-between;
+                padding-right: 15px;
+                .comment-count {
+                    color: #8e8e8e;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+            .time {
+                color: #8e8e8e;
+                display: inline;
+                font-family: -apple-system;
+                font-size: 10px;
+                letter-spacing: 0.2px;
+                line-height: 12px;
+                text-transform: uppercase;
+            }
+        }
+        .add-comment {
+            display: flex;
+            width: 100%;
+            padding: 10px 10px;
+            margin-top: 10px;
+            padding-right: 0;
+            align-items: center;
+            border-top: 1px solid #eeeeee;
+            justify-content: space-between;
+            .btn-emotions {
+                min-width: 5%;
+                width: 5%;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                padding: 0;
+            }
+            .input-comment {
+                width: 80%;
+                height: 100%;
+                padding: 0;
+            }
+            .input-comment>input[type="text"] {
+                width: 100%;
+                height: 100%;
+                color: #262626;
+                display: flex;
+                font-family: -apple-system;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            .btn-post {
+                width: 10%;
+                min-width: 10%;
+                padding: 0;
+                color: #0095f6;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 18px;
+                text-align: center;
+            }
+        }
+        .action {
+            display: inline-flex;
+            position: relative;
+            .icon {
+                z-index: 100;
+                position: relative;
+                cursor: pointer;
+                transition: opacity linear .2s;
+                &:hover:not(.icon-liked) {
+                    opacity: 0;
+                }
+            }
+            .icon-hover {
+                position: absolute;
+                opacity: 1;
+                transition: opacity linear .2s;
+            }
+            .icon-liked {
+                animation: liked-post linear .2s;
+                position: absolute;
+            }
+            @keyframes liked-post {
+                0% {
+                    width: 30px;
+                    height: 30px;
+                    transform: translateX(-2px);
+                }
+                50% {
+                    width: 27;
+                    height: 27;
+                    transform: translateX(-1px);
+                }
+                100% {
+                    width: 24;
+                    height: 24;
+                    transform: translateX(0px);
+                }
+            }
+        }
+    }
+    .popup-comment {
+        width: 1200px;
+        height: 880px;
+        .container-popup {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: red;
+            .popup-media {
+                width: 700px;
+                height: 700px;
+                padding: 20px 0px;
+                padding-bottom: 0px;
+                flex: 1;
+            }
+            .popup-comment {
+                background-color: blue;
+                flex: 1;
+            }
+        }
+    }
+}

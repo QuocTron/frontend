@@ -1,0 +1,72 @@
+.container {
+    margin-top: 9px;
+    margin-left: 2px;
+    width: 100%;
+    .line-suggestions {
+        margin-top: 10px;
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title-suggestions {
+            color: #8e8e8e;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 18px;
+            margin: -3px 0px -4px;
+        }
+        .see-all {
+            color: #262626;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+            margin: -2px 0px -3px;
+            text-align: center;
+        }
+    }
+    .accounts-suggested {
+        margin-top: 10px;
+        padding-left: 10px;
+    }
+    .more-links {
+        display: flex;
+        flex-wrap: wrap;
+        width: 103%;
+        padding-left: 14px;
+        .link-other {
+            color: #c7c7c7;
+            display: inline;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            padding: 5px;
+            transition: text-decoration linear .1s;
+            position: relative;
+            &:hover {
+                text-decoration: underline;
+            }
+            &:not(.link-other:first-child)::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                background-color: #c7c7c7;
+                border-radius: 50%;
+            }
+            &:last-child:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .info-company {
+        color: #c7c7c7;
+        display: inline;
+        font-size: 12px;
+        line-height: 16px;
+        padding-left: 14px;
+        text-transform: uppercase;
+    }
+}

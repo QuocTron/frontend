@@ -1,0 +1,210 @@
+.wrapper {
+    --search-border-radius: 92px;
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --search-button-width: 52px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--default-layout-header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    position: fixed;
+}
+
+.inner {
+    height: 100px;
+    width: var(--default-layout-header-width);
+    padding: 0 var(--default-layout-horizontal-spacer);
+    display: flex;
+    max-width: calc(935px + 40px);
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+        flex: 1;
+        margin-right: 78px;
+        padding-top: 8px;
+        padding-left: 1px;
+        .logo-link {
+            display: flex;
+            align-items: center;
+            .logo-arrow-down {
+                margin-left: 8px;
+                margin-top: -8px;
+            }
+        }
+    }
+    .actions {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        margin-left: 75px;
+        padding-right: 15px;
+        align-items: center;
+        .popup-upload {
+            width: 710px;
+            height: 750px;
+            border-radius: 10px;
+            animation: openPopup ease-in-out .1s;
+            .container-popup {
+                width: 100%;
+                height: 100%;
+                .popup-close {
+                    position: absolute;
+                    top: -12%;
+                    right: -80%;
+                    font-size: 36px;
+                    font-weight: 100;
+                    color: #ffffff;
+                    fill: #ffffff;
+                    cursor: pointer;
+                }
+                .title-popup {
+                    text-align: center;
+                    border-bottom: 1px solid rgb(218, 218, 218);
+                    padding: 9px 0;
+                }
+                .content-popup {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    height: 100%;
+                    .description {
+                        color: #262626;
+                        font-size: 2.2rem;
+                        font-weight: 300;
+                        line-height: 26px;
+                        margin: 10px 0 20px 0;
+                    }
+                    .btn-upload-computer {
+                        width: 158px;
+                        height: 30px;
+                        background-color: #0095fe;
+                        color: #ffffff;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        padding: 5px 9px;
+                        text-align: center;
+                        line-height: 18px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+        .action-item {
+            color: blue;
+            fill: #fff;
+            .icon,
+            .icon-active {
+                display: flex;
+            }
+            .icon-active {
+                display: none;
+            }
+            &.active {
+                .icon {
+                    display: none;
+                }
+                .icon-active {
+                    display: block;
+                }
+            }
+        }
+        .avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            overflow: hidden;
+            padding: 1px;
+            border: 1px solid white;
+            &.active {
+                border: 1px solid black;
+            }
+        }
+        .menu-popper {}
+        .menu-body {
+            overflow-y: auto;
+            padding: 0;
+        }
+        .menu-list {
+            width: 230px;
+            text-align: left;
+            position: relative;
+            margin-top: 4px;
+            margin-right: -20px;
+            &::before {
+                overflow: hidden;
+                content: "";
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: -5px;
+                right: 25px;
+                box-shadow: rgb(0 0 0 /12%) 0px 1px 12px;
+                background-color: rgb(255, 255, 255);
+                transform: rotate(45deg);
+                border-radius: 1px;
+                z-index: -1;
+            }
+            &::after {
+                overflow: hidden;
+                content: "";
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                top: -8px;
+                right: 27px;
+                // background-color: rgb(255, 255, 255);
+                border-bottom: 8px solid rgb(255, 255, 255);
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+            }
+            &.hide {
+                opacity: 0;
+                animation: hideTippyMenu ease-in-out .1s
+            }
+        }
+        @keyframes hideTippyMenu {
+            0% {
+                opacity: 1;
+                transform: translateY(-10px);
+            }
+            50% {
+                opacity: 0.2;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+        }
+        @keyframes openPopup {
+            0% {
+                opacity: 0;
+                width: 730px;
+                height: 770px;
+            }
+            50% {
+                opacity: 0.2;
+                width: 720px;
+                height: 760px;
+            }
+            100% {
+                opacity: 1;
+                width: 710px;
+                height: 750px;
+            }
+        }
+    }
+}

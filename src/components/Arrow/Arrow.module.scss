@@ -1,0 +1,27 @@
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.4rem;
+    z-index: 1;
+    height: max-content;
+    .icon-arrow {
+        padding: 2px;
+        background-color: rgba(250, 249, 249);
+        border-radius: 50%;
+    }
+    &.arrow-prev {
+        left: 10px;
+        transition: opacity linear .2s;
+        &.hide {
+            opacity: 0;
+        }
+    }
+    &.arrow-next {
+        right: 10px;
+        transition: opacity linear .2s;
+        &.hide {
+            opacity: 0;
+        }
+    }
+}

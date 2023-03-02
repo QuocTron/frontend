@@ -1,0 +1,121 @@
+.search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    height: 36px;
+    min-width: 125px;
+    position: relative;
+    width: 215px;
+    background-color: #efefef;
+    border-radius: 8px;
+    padding: 6px 0px 0px 16px;
+    position: relative;
+    overflow: hidden;
+    &.isFocused {
+        .btn-search {
+            display: none;
+        }
+        .input-search {
+            margin-left: 0;
+        }
+    }
+    .btn-search {
+        display: flex;
+        align-items: center;
+        margin-top: -5px;
+    }
+    .input-search {
+        background-color: #efefef;
+        width: 100%;
+        height: 100%;
+        color: #262626;
+        line-height: 18px;
+        outline: none;
+        font-size: 16px;
+        font-weight: 100;
+        margin-left: 12px;
+    }
+    .btn-clear {
+        font-size: 1.4rem;
+        color: rgb(206, 204, 204);
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        &.isFocused {
+            opacity: 1;
+        }
+    }
+}
+
+.results-search {
+    width: 376px;
+    height: 365px;
+    margin-right: -50px;
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: -5px;
+        left: 185px;
+        box-shadow: rgb(0 0 0 /12%) 0px 1px 12px;
+        background-color: rgb(255, 255, 255);
+        transform: rotate(45deg);
+        border-radius: 1px;
+        z-index: -1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 186px;
+        border-bottom: 8px solid rgb(255, 255, 255);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+    }
+    &.hide {
+        opacity: 0;
+        animation: hideTippySearch ease-in-out .1s
+    }
+    @keyframes hideTippySearch {
+        0% {
+            opacity: 1;
+            transform: translateY(-10px);
+        }
+        50% {
+            opacity: 0.2;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+    }
+}
+
+.results {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 15px 0px;
+    .icon-loading-result {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+.icon-loading {
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translate(-85%, -20%) rotate(0);
+    }
+    to {
+        transform: translate(-85%, -20%) rotate(360deg);
+    }
+}

@@ -39,12 +39,7 @@ const Post = () => {
     const refMedia = useRef();
     const accountsTagged = ['imechuplog'];
     const like = 3205;
-    const imagesPosted = [
-        'https://scontent.fsgn2-1.fna.fbcdn.net/v/t39.30808-6/305851688_1410124766192170_6247718476813417532_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=NLBjuqUOFp0AX8MLIEm&_nc_ht=scontent.fsgn2-1.fna&oh=00_AT9f4pVzEZchQlNYEOoWZnKklRqfz3kTRY6ctpZygRDirA&oe=6323E02A',
-        'https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/305205667_1412276785976968_7700371388274473933_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=bwPouk00tlgAX80Ixkj&tn=BzZ68jSqE8IEQ5ph&_nc_ht=scontent.fsgn2-4.fna&oh=00_AT-yHvAIp5tfVf2QYr4zfn-6Cn3lkK-Q_zMWohbMsVQBYQ&oe=63235FB8',
-        // '/static/media/videotiktok.a0471c362a32a7b9374e.mp4',
-        'https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/305848345_1410838082787505_9066128840414018397_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=VbFTOdIQ9_QAX9V9eVK&_nc_ht=scontent.fsgn2-5.fna&oh=00_AT8HeJYtAkEv_qWqFEAVlpdsbl3z6RqL-BKPrOr8zIN3QA&oe=6322CFA0',
-    ];
+    const imagesPosted = [];
     const date = '2022-07-17T04:54:21.474+00:00';
     const comments = [
         {
